@@ -78,3 +78,29 @@ There is no build-step-required DSL.
 
 ```js
 import { showFeature } from "./features/report.js";
+
+### 5. UI as Structured DOM, Not Virtual Theater
+
+SNF treats the DOM as the source of truth, not as an implementation detail.
+	-	DOM nodes are real
+	-	Events are real
+	-	State lives where it makes sense
+	-	Rendering is explicit
+
+SNF does not require:
+	-	Virtual DOM diffing
+	-	Synthetic event systems
+	-	Reconciliation layers
+	-	Reactive signal graphs for CRUD apps
+
+### 6. Progressive Construction, Not Grand Architecture
+
+SNF applications grow incrementally:
+	1.	Start with static HTML
+	2.	Add behavior where needed
+	3.	Factor code only when repetition appears
+	4.	Load features dynamically when required
+
+There is no “correct final architecture” imposed upfront.
+
+> Programs should grow like cities, not like palaces.
